@@ -12,6 +12,22 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 -- image: Image 1
 src: https://www.liveabout.com/thmb/YCJmu1khSJo8kMYM090QCd9W78U=/1250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/powerpuff_girls-56a00bc45f9b58eba4aea61d.jpg
 
+-- image: Image 1
+src: https://www.liveabout.com/thmb/YCJmu1khSJo8kMYM090QCd9W78U=/1250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/powerpuff_girls-56a00bc45f9b58eba4aea61d.jpg
+
+-- image: Image 1
+src: https://www.liveabout.com/thmb/YCJmu1khSJo8kMYM090QCd9W78U=/1250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/powerpuff_girls-56a00bc45f9b58eba4aea61d.jpg
+
+-- image: Image 1
+src: https://www.liveabout.com/thmb/YCJmu1khSJo8kMYM090QCd9W78U=/1250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/powerpuff_girls-56a00bc45f9b58eba4aea61d.jpg
+
+-- image: Image 1
+src: https://www.liveabout.com/thmb/YCJmu1khSJo8kMYM090QCd9W78U=/1250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/powerpuff_girls-56a00bc45f9b58eba4aea61d.jpg
+
+
+-- image: Image 1
+src: https://www.liveabout.com/thmb/YCJmu1khSJo8kMYM090QCd9W78U=/1250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/powerpuff_girls-56a00bc45f9b58eba4aea61d.jpg
+
 -- end: page
 
 
@@ -36,8 +52,9 @@ children container:
 
 -- ftd.column:
 background.solid: $base
-horizontal-resizing.fixed.percent: 100
-vertical-resizing.fixed.percent: 100
+width.fixed.percent: 100
+
+
 
 -- header:
 section-item: $page.section-item
@@ -47,17 +64,17 @@ navtitle: $page.navtitle
 nav-subtitle: $page.nav-subtitle
 current-title: $page.current-title
 
+
 -- ftd.row:
 padding.px: 48
 spacing.px: 48
-vertical-resizing.fixed.percent: 100
-horizontal-resizing.fixed.percent: 93
+width.fixed.percent: 100
 
 -- ftd.column:
 background.solid: $step-1
 padding.px: 24
-vertical-resizing.fixed.percent: 98
-horizontal-resizing.fixed.percent: 20
+min-height.percent: 100
+width.fixed.percent: 20
 
 -- print-toc:
 item: $page.toc
@@ -66,6 +83,7 @@ item: $page.toc
 
 -- ftd.column:
 spacing.px: 32
+width.fixed.percent: 80
 
 -- ftd.text: $page.title
 color: $text-strong
@@ -76,7 +94,7 @@ color: $text-strong
 -- ftd.column:
 children: $page.container
 spacing.px: 32
-horizontal-resizing.fixed.percent: 100
+width.fixed.percent: 100
 
 -- end: ftd.column
 
@@ -112,8 +130,6 @@ $loop$: $print-toc-item.item as $obj
 
 -- end: print-toc-item
 
--- print-toc-item:
-item: $item
 
 
 
@@ -214,21 +230,21 @@ $loop$: $print-toc-one.children as $obj
 -- component image:
 optional caption title:
 ftd.image-src src:
+ftd.align aaa: ftd.align.center
 
 -- ftd.column: 
-horizontal-resizing.fixed.percent: 100
-align-content: ftd.align.center
+width.fixed.percent: 100
+align-content: $image.aaa
 spacing.px: 12
 
 -- ftd.column:
-horizontal-resizing.fixed.percent: 100
-vertical-resizing.fixed.px: 100
+width.fixed.percent: 100
 align-content: ftd.align.center
 
 -- ftd.image:
 src: $image.src
-horizontal-resizing.fixed.px: 400
-vertical-resizing.fixed.px: 100
+width.fixed.px: 400
+height.fixed.px: 100
 
 -- end: ftd.column
 
@@ -259,14 +275,14 @@ string nav-subtitle:
 string current-title:
 
 -- ftd.column:
-horizontal-resizing.fixed.percent: 100
+width.fixed.percent: 100
 
 -- ftd.row:
-horizontal-resizing.fixed.percent: 93
+width.fixed.percent: 100
 padding.px: 32
 
 -- ftd.row:
-horizontal-resizing.fixed.percent: 26
+width.fixed.percent: 26
 
 -- ftd.image:
 src: $src
@@ -274,7 +290,7 @@ src: $src
 -- end: ftd.row
 
 -- ftd.row:
-horizontal-resizing.fixed.percent: 74
+width.fixed.percent: 74
 align-content: ftd.align.right
 
 -- print-toc-item:
@@ -286,11 +302,12 @@ item: $header.section-item
 
 -- ftd.row:
 background.solid: $step-1
-horizontal-resizing.fixed.percent: 95
-padding.px: 32
+width.fixed.percent: 100
+padding-vertical.px: 24
+padding-horizontal.px: 32
 
 -- ftd.column:
-horizontal-resizing.fixed.percent: 26
+width.fixed.percent: 26
 spacing.px: 12
 
 -- ftd.text: $header.navtitle
@@ -320,17 +337,22 @@ color: $text-strong
 -- end: ftd.column
 
 -- ftd.column:
-vertical-resizing.fixed.percent: 100
 align-content: ftd.align.right
-horizontal-resizing.fixed.percent: 100
+width.fixed.percent: 100
+align-self: ftd.align-self.center
 
 -- ftd.row:
-horizontal-resizing.fixed.percent: 100
+width.fixed.percent: 100
 align-content: ftd.align.right
 
+
 -- ftd.column:
-vertical-resizing.fixed.percent: 100
 align-content: ftd.align.center
+
+
+-- ftd.column:
+align-content: ftd.align.center
+
 
 -- print-toc-item:
 item: $header.subsection-item

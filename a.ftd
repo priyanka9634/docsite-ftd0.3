@@ -1,0 +1,13 @@
+
+-- page: hello
+
+-- component page:
+caption title:
+
+-- ftd.column:
+
+-- ftd.text: $page.title
+
+-- end: ftd.column
+
+-- end: page
