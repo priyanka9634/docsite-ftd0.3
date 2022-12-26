@@ -1,0 +1,138 @@
+
+
+-- rolebars:
+
+-- component rolebars:
+boolean $open: true
+
+-- ftd.column:
+background.solid: pink
+width.fixed.percent: 100
+height.fixed.percent: 100
+
+-- ftd.column:
+width.fixed.percent: 100
+height.fixed.percent: 100
+align-content: ftd.align.center
+align-self: ftd.align-self.center
+
+-- ftd.image:
+if: {rolebars.open}
+src: https://img.icons8.com/ios-filled/512/delete-sign.png
+width.fixed.px: 48
+height.fixed.px: 48
+$on-click$: $toggle($value=$rolebars.open)
+margin-left.px: -62
+margin-top.px: 32
+
+
+-- ftd.image:
+if: {! rolebars.open}
+src: https://img.icons8.com/external-jumpicon-glyph-ayub-irawan/2x/external-hamburger-basic-ui-jumpicon-glyph-jumpicon-glyph-ayub-irawan-2.png
+width.fixed.px: 48
+height.fixed.px: 48
+$on-click$: $toggle($value=$rolebars.open)
+margin-left.px: -62
+margin-top.px: 32
+
+
+
+-- ftd.row:
+if: {rolebars.open }
+margin-top.px: -62
+-- ftd.column:
+background.solid: grey
+width.fixed.px: 50
+height.fixed.px: 50
+position: anchor
+align-content: ftd.align.center
+align-self: ftd.align-self.center
+border-radius.percent: 50
+margin-top.px: -100
+margin-bottom.px: -170
+margin-left.px: -84
+
+-- ftd.image:
+src: https://img.icons8.com/external-jumpicon-glyph-ayub-irawan/2x/external-hamburger-basic-ui-jumpicon-glyph-jumpicon-glyph-ayub-irawan-2.png
+width.fixed.px: 48
+height.fixed.px: 48
+
+
+-- end: ftd.column
+
+-- ftd.column:
+background.solid: grey
+width.fixed.px: 50
+height.fixed.px: 50
+position: anchor
+align-content: ftd.align.center
+align-self: ftd.align-self.center
+border-radius.percent: 50
+margin-top.px: -100
+
+-- ftd.image:
+src: https://img.icons8.com/external-jumpicon-glyph-ayub-irawan/2x/external-hamburger-basic-ui-jumpicon-glyph-jumpicon-glyph-ayub-irawan-2.png
+width.fixed.px: 48
+height.fixed.px: 48
+
+
+-- end: ftd.column
+
+-- ftd.column:
+background.solid: grey
+width.fixed.px: 50
+height.fixed.px: 50
+position: anchor
+align-content: ftd.align.center
+align-self: ftd.align-self.center
+border-radius.percent: 50
+margin-top.px: -100
+margin-left.px: 89
+
+-- ftd.image:
+src: https://img.icons8.com/external-jumpicon-glyph-ayub-irawan/2x/external-hamburger-basic-ui-jumpicon-glyph-jumpicon-glyph-ayub-irawan-2.png
+width.fixed.px: 48
+height.fixed.px: 48
+
+-- end: ftd.column
+
+-- ftd.column:
+background.solid: grey
+width.fixed.px: 50
+height.fixed.px: 50
+position: anchor
+align-content: ftd.align.center
+align-self: ftd.align-self.center
+border-radius.percent: 50
+margin-top.px: -100
+margin-bottom.px: -170
+
+-- ftd.image:
+src: https://img.icons8.com/external-jumpicon-glyph-ayub-irawan/2x/external-hamburger-basic-ui-jumpicon-glyph-jumpicon-glyph-ayub-irawan-2.png
+width.fixed.px: 48
+height.fixed.px: 48
+
+
+-- end: ftd.column
+
+
+
+
+-- end: ftd.row
+
+
+-- end: ftd.column
+
+
+
+-- end: ftd.column
+
+-- end: rolebars
+
+
+
+
+-- void toggle(value):
+boolean $value:
+
+value = !value;

@@ -1,0 +1,48 @@
+
+-- circle:
+
+-- component circle:
+boolean $open: true
+
+-- ftd.column:
+background.solid: blue
+width.fixed.percent: 100
+height.fixed.percent: 100
+align-content: ftd.align.center
+
+-- ftd.column:
+border-color: white
+border-width.px: 2
+padding.px: 12
+border-radius.percent: 50
+border-style: dashed
+
+-- ftd.column:
+background.solid: white
+width.fixed.px: 150
+height.fixed.px: 150
+$on-click$: $toggle($value=$circle.open)
+border-radius.percent: 50
+align-content: ftd.align.center
+align-self: ftd.align-self.center
+
+-- ftd.image:
+src: https://img.icons8.com/external-jumpicon-glyph-ayub-irawan/2x/external-hamburger-basic-ui-jumpicon-glyph-jumpicon-glyph-ayub-irawan-2.png
+width.fixed.px: 48
+height.fixed.px: 48
+
+-- ftd.text: hello
+if:{circle.open}
+
+-- end: ftd.column
+-- end: ftd.column
+
+
+-- end: ftd.column
+
+-- end: circle
+
+-- void toggle(value):
+boolean $value:
+
+value = !value;

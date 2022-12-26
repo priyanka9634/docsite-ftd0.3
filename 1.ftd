@@ -1,0 +1,96 @@
+
+
+
+-- rolebar:
+
+-- component rolebar:
+boolean $open: true
+
+
+-- ftd.column:
+width.fixed.percent: 100
+height.fixed.percent: 100
+align-content: ftd.align.center
+
+-- ftd.row:
+if: {rolebar.open }
+
+-- ftd.column:
+background.solid: grey
+width.fixed.px: 50
+height.fixed.px: 50
+position: anchor
+align-content: ftd.align.center
+align-self: ftd.align-self.center
+border-radius.percent: 50
+margin-top.px: -100
+margin-bottom.px: -170
+margin-left.px: -84
+
+-- end: ftd.column
+
+-- ftd.column:
+background.solid: grey
+width.fixed.px: 50
+height.fixed.px: 50
+position: anchor
+align-content: ftd.align.center
+align-self: ftd.align-self.center
+border-radius.percent: 50
+margin-top.px: -100
+
+-- end: ftd.column
+
+-- ftd.column:
+background.solid: grey
+width.fixed.px: 50
+height.fixed.px: 50
+position: anchor
+align-content: ftd.align.center
+align-self: ftd.align-self.center
+border-radius.percent: 50
+margin-top.px: -100
+margin-left.px: 89
+
+-- end: ftd.column
+
+-- ftd.column:
+background.solid: grey
+width.fixed.px: 50
+height.fixed.px: 50
+position: anchor
+align-content: ftd.align.center
+align-self: ftd.align-self.center
+border-radius.percent: 50
+margin-top.px: -100
+margin-bottom.px: -170
+
+
+-- end: ftd.column
+
+
+-- end: ftd.row
+
+
+-- ftd.column:
+background.solid: grey
+width.fixed.px: 150
+height.fixed.px: 150
+position: anchor
+align-content: ftd.align.center
+align-self: ftd.align-self.center
+border-radius.percent: 50
+margin-left.px: -89
+$on-click$: $toggle($value=$rolebar.open)
+
+-- end: ftd.column
+-- end: ftd.column
+
+-- end: rolebar
+
+
+
+-- void toggle(value):
+boolean $value:
+
+value = !value;

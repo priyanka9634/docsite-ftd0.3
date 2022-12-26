@@ -1,0 +1,82 @@
+
+
+-- sidebar:
+
+-- component sidebar:
+boolean $open: false
+
+-- ftd.column:
+background.solid: purple
+width.fixed.percent: 100
+height.fixed.percent: 100
+
+
+
+-- ftd.column:
+background.solid: white
+width.fixed.px: 150
+height.fixed.px: 150
+border-bottom-right-radius.percent: 100
+
+
+-- ftd.column:
+width.fixed.percent: 100
+height.fixed.percent: 100
+align-content: ftd.align.top-center
+align-self: ftd.align-self.center
+margin-top.px: 44
+z-index: -44
+
+-- ftd.image:
+src: https://img.icons8.com/external-jumpicon-glyph-ayub-irawan/2x/external-hamburger-basic-ui-jumpicon-glyph-jumpicon-glyph-ayub-irawan-2.png
+width.fixed.px: 24
+height.fixed.px: 24
+$on-click$: $toggle($value=$sidebar.open)
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.column:
+if: {sidebar.open }
+
+
+-- ftd.image:
+src: https://img.icons8.com/external-jumpicon-glyph-ayub-irawan/2x/external-hamburger-basic-ui-jumpicon-glyph-jumpicon-glyph-ayub-irawan-2.png
+width.fixed.px: 48
+height.fixed.px: 48
+margin-top.px: -142
+margin-left.px: 170
+
+
+-- ftd.image:
+src: https://img.icons8.com/external-jumpicon-glyph-ayub-irawan/2x/external-hamburger-basic-ui-jumpicon-glyph-jumpicon-glyph-ayub-irawan-2.png
+width.fixed.px: 48
+height.fixed.px: 48
+margin-top.px: 42
+margin-left.px: 170
+
+-- ftd.image:
+src: https://img.icons8.com/external-jumpicon-glyph-ayub-irawan/2x/external-hamburger-basic-ui-jumpicon-glyph-jumpicon-glyph-ayub-irawan-2.png
+width.fixed.px: 48
+height.fixed.px: 48
+margin-top.px: 12
+margin-left.px: 87
+
+-- ftd.image:
+src: https://img.icons8.com/external-jumpicon-glyph-ayub-irawan/2x/external-hamburger-basic-ui-jumpicon-glyph-jumpicon-glyph-ayub-irawan-2.png
+width.fixed.px: 48
+height.fixed.px: 48
+
+-- end: ftd.column
+
+
+-- end: ftd.column
+
+-- end: sidebar
+
+
+-- void toggle(value):
+boolean $value:
+
+value = !value;
